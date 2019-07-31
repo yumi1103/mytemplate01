@@ -1,0 +1,69 @@
+@charset "UTF-8"
+
+
+
+
+//====================
+//IMPORT
+//====================
+
+@import "_variables.sass"
+@import "_reset.sass"
+
+/*============================
+ *General
+ *============================
+
+
+*:not(br)
+  box-sizing: border-box
+  line-height: 1.4
+
+  &::before,
+  &::after 
+    box-sizing: inherit
+    line-height: inherit
+
+
+
+body 
+  font-family: 'Noto Sans JP', "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif
+  font-size: 16px
+  color: $basecolor
+  -webkit-text-size-adjust: 100%
+  position: relative
+  text-align: left
+  
+
+
+.inner 
+  margin: 0 auto
+  padding: 0 15px
+  width: 100%
+
+
+p 
+  line-height: 1.75
+
+
+
+textarea,
+button,
+input,
+select
+  @include form-element-reset
+
+
+
+/*============================
+  *Common
+  *============================
+
+
+.all
+  overflow: hidden
+  border-radius: 10px
+  display: flexbox
+  justify-content: flex-start
+  align-items: stretch
+

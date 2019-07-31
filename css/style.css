@@ -1,0 +1,244 @@
+@charset "UTF-8";
+/*============================
+ *Reset
+ *============================ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+th {
+  font-weight: normal;
+}
+
+a:active {
+  color: inherit;
+}
+
+a:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+video {
+  vertical-align: bottom;
+  width: 100%;
+  height: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/*============================
+ *General
+ *============================ */
+*:not(br) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.4;
+}
+
+*:not(br)::before, *:not(br)::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  line-height: inherit;
+}
+
+body {
+  font-family: 'Noto Sans JP', "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  color: #000000;
+  -webkit-text-size-adjust: 100%;
+  position: relative;
+  text-align: left;
+}
+
+.inner {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+p {
+  line-height: 1.75;
+}
+
+textarea,
+button,
+input,
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+}
+
+/*============================
+  *Common
+  *============================ */
+.all {
+  overflow: hidden;
+  border-radius: 10px;
+  display: flexbox;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}

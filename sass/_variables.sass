@@ -1,0 +1,162 @@
+@charset "UTF-8"
+
+
+$basecolor: #000000
+$color01: #071e3d
+$color02: #1f4287
+$color03: #278ea5
+$color04: #21e6c1
+
+
+
+
+// ---------------------------
+//transition
+//----------------------------
+
+@mixin transition($transition-property, $transition-time, $method) 
+  -ms-transition: $transition-property $transition-time $method
+  transition: $transition-property $transition-time $method
+
+
+
+// ---------------------------
+//flexまとめ
+//----------------------------
+
+@mixin flexbox 
+  //  display: -webkit-box // old
+  //  display: -moz-box // old
+  display: -ms-flexbox // ie
+  //  display: -webkit-flex // new
+  display: flex // new
+  //  -js-display: flex //ie9以下
+
+
+@mixin justify-content($value: space-between) 
+  @if $value==flex-start 
+    -webkit-box-pack: start
+    -ms-flex-pack: start
+  
+  @else if $value==flex-end 
+    -ms-flex-pack: end
+  
+  @else if $value==space-between 
+    -ms-flex-pack: justify
+  
+  @else if $value==space-around 
+    -ms-flex-pack: distribute  
+  @else 
+    -ms-flex-pack: $value
+  justify-content: $value
+
+
+@mixin align-items($value: center) 
+  @if $value==flex-start 
+    -ms-flex-align: start
+  
+  @else if $value==flex-end 
+    -ms-flex-align: end
+  
+  @else 
+    -ms-flex-align: $value
+  
+  align-items: $value
+
+
+@mixin flex-direction($direction:column) 
+  $row: row
+  $row-reverse: row-reverse
+  $column: column
+  $column-reverse: column-reverse
+  @if $direction==row 
+    -ms-flex-direction: $row
+    flex-direction: $row
+  
+  @else if $direction==row-reverse 
+    -ms-flex-direction: $row-reverse
+    flex-direction: $row-reverse
+  
+  @else if $direction==column 
+    -ms-flex-direction: $column
+    flex-direction: $column
+  
+  @else if $direction==column-reverse 
+    -ms-flex-direction: $column-reverse
+    flex-direction: $column-reverse
+    
+
+
+@mixin flex-wrap($wrap:wrap)
+  -ms-flex-wrap: $wrap
+  flex-wrap: $wrap
+
+
+@mixin flex-grow($grow:1) 
+//    -webkit-flex-grow: $grow
+//    -moz-flex-grow: $grow
+  -ms-flex-grow: $grow
+  flex-grow: $grow
+
+
+@mixin align-content($value: stretch) 
+  @if $value==flex-start 
+    -ms-flex-line-pack: start
+
+  @else if $value==flex-end 
+    -ms-flex-line-pack: end
+
+  @else 
+    -ms-flex-line-pack: $value
+
+  align-content: $value
+
+
+@mixin align-self($align: auto) 
+  -ms-align-self: $align
+  align-self: $align
+
+
+
+@mixin flex-order($num:1) 
+  -ms-flex-order: $num
+  order: $num
+
+
+
+
+// ---------------------------
+//クリアフィックス
+//----------------------------
+
+@mixin cf 
+  zoom: 1
+  &:before,
+  &:after
+    content: ""
+    display: table
+  
+  &:after 
+    clear: both
+    
+
+
+
+
+// ---------------------------
+//フォームリセット
+//----------------------------
+
+@mixin form-element-reset
+  -moz-appearance: none
+  -webkit-appearance: none
+  appearance: none
+  border-radius: 0
+  border: 0
+  margin: 0
+//    padding: 0
+  background: none transparent
+  vertical-align: middle
+  font-size: inherit
+  color: inherit
+
